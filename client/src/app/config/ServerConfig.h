@@ -24,13 +24,13 @@ namespace ServerConfig {
 // ConnectServer: lista de servers y ocupación (F4/02), redirect al GameServer
 // (F4/03). Con puerto 0 no se usa: el cliente conecta directo al GameServer y el
 // select-server muestra una entrada fija.
-constexpr char           ConnectServerIP[]   = "mu.server-pups.space";
-constexpr unsigned short ConnectServerPort   = 44405;
+constexpr char           ConnectServerIP[]   = "127.0.0.1";
+constexpr unsigned short ConnectServerPort   = 0;
 
 // GameServer: destino directo cuando no hay ConnectServer, y fallback si el
 // ConnectServer no responde. Con ConnectServer, el GameServer al que se salta lo
 // manda el server en el redirect F4/03 (sale de su ServerList.dat).
-constexpr char           GameServerIP[]      = "mu.server-pups.space";
+constexpr char           GameServerIP[]      = "127.0.0.1";
 constexpr unsigned short GameServerPort      = 55901;
 
 // Identidad del server (ver arriba). ClientVersion acepta "0.97.11" o "09711".
@@ -44,6 +44,6 @@ constexpr char           ClientVersion[]     = "0.97.40";
 // User/Cache/<server>/server.pub, que se puede editar.  Con clave, ésa es la
 // raíz y ningún archivo la pisa; si está mal escrita no se conecta a ningún
 // server (ver net/ServerTrust.h).
-constexpr char           ServerPublicKey[]   = "";
+constexpr char           ServerPublicKey[]   = "023fc4d603fb443ce93bdb5fe8c9b34d82191918c76cc61a0df36cbf82dafa87";
 
 } // namespace ServerConfig
